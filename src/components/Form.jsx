@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-export default function Form(onAddStudent) {
+export default function Form({ onAddStudent }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,7 +18,7 @@ export default function Form(onAddStudent) {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    //sends data upto the app
     onAddStudent(formData);
     setFormData({
       name: "",

@@ -13,6 +13,17 @@ export default function StudentTable({ data }) {
             <th>Phone</th>
           </tr>
         </thead>
+
+        <tbody>
+          {data.map((student, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{student.name}</td>
+              <td>{student.email}</td>
+              <td>{student.phone}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
