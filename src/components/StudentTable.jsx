@@ -1,10 +1,10 @@
 import React from "react";
-
+import "./StudentTable.css";
 export default function StudentTable({ data }) {
   return (
     <div>
       <h2>Student List</h2>
-      <table border="1" cellPadding="10">
+      <table border="1" cellPadding="10" className="student-table">
         <thead>
           <tr>
             <th>#</th>

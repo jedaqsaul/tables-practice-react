@@ -1,0 +1,13 @@
+.student-table {
+  background-color: rgb(243, 243, 243);
+  width: 900px;
+  min-width: 500px;
+}
+.student-table thead {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.student-table tbody {
+  font-family: Arial;
+}
