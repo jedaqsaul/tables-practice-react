@@ -14,6 +14,13 @@ export default function App() {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
+
+  const handleDelete = (emailToDelete) => {
+    const updatedList = students.filter(
+      (student) => student.email !== emailToDelete
+    );
+    setStudents(updatedList);
+  };
   //filter based on search
 
   const filteredStudents = students.filter((student) =>
@@ -31,7 +38,7 @@ export default function App() {
           style={{ marginBottom: "1rem", padding: "0.5rem", width: "100%" }}
         />
       </div>
-      <StudentTable data={filteredStudents} />
+      <StudentTable data={filteredStudents} onDelete={handleDelete} />
     </div>
   );
 }

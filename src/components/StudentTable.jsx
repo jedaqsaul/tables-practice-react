@@ -1,6 +1,6 @@
 import React from "react";
 import "./StudentTable.css";
-export default function StudentTable({ data }) {
+export default function StudentTable({ data, onDelete }) {
   return (
     <div>
       <h2>Student List</h2>
@@ -11,6 +11,7 @@ export default function StudentTable({ data }) {
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
+            <th>Action</th>
           </tr>
         </thead>
 
@@ -21,6 +22,9 @@ export default function StudentTable({ data }) {
               <td>{student.name}</td>
               <td>{student.email}</td>
               <td>{student.phone}</td>
+              <td>
+                <button onClick={() => onDelete(student.email)}>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
